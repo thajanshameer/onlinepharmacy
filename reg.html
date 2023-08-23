@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="style.css">
+    <title>Document</title>
+    <script src="reg.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5YNZXH8CF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L5YNZXH8CF');
+</script>
+</head>
+<body>
+    <form action="register.php" method="POST" id="form" >
+    <div class="container">
+        <h1 >online pharmacy
+        </h1>
+
+        <p>fill in this form to personal information</p>
+        <hr>
+        
+    <div class="input-group">
+        <label for="name"><b>NAME</b></label><br>
+        <input type="text"placeholder="enter name"name="username"id="username">
+        <div class="error"></div>
+
+    </div>
+        <br>
+        <div class="input-group">
+
+        <label for="phoneno"><b>PHONE NO</b></label><br>
+        <input type="number"placeholder="enter phone no"name="phone" id="phone" onkeypress="return avoidalphabets(event)">
+        
+        <div class="error"></div>
+        </div>
+
+        <br>
+        <div class="input-group">
+
+        <label for="email"><b>EMAIL</b></label><br>
+        <input type="email"placeholder="enter email"name="email" id="email">
+        <div class="error"></div>
+        </div>
+        <br>
+        <div class="input-group">
+
+        <label for="pass"><b>CREATE PASSWORD</b></label><br>
+        <input type="password"placeholder="enter password"name="pass" id="pass">
+        <p class="error"></p>
+        </div>
+        <br>
+        
+        <div class="input-group">
+
+        <label for="conform"><b>CONFORM PASSWORD</b></label><br>
+        <input type="password"placeholder="enter conform password"name="conform" id="conform">
+        <div class="error"></div>
+</div>
+
+
+        <p>fill the personal information <a href="#">terms and conditions</a></p>
+        <button type="submit" id="registerbtn" class="registerbtn">register</button>
+
+        <h1>
+        <a href="signin.html"class="login">sign in</a>
+        <br>
+        <footer>
+             
+        
+        </footer>
+        </h1>
+
+    </div>
+    
+
+</form>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">Dashboard</a></li>
+            <li><a href="">Users</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Orders</a></li>
+            <li><a href="">Reports</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="dashboard">
+            <section id="dashboard">
+                <h2>Dashboard</h2>
+                <div class="summary">
+                    <div class="card">
+                        <h3>Total Users</h3>
+                        <p>1500</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Products</h3>
+                        <p>350</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Orders</h3>
+                        <p>800</p>
+                    </div>
+                </div>
+                <div class="charts">
+                    <div class="chart">
+                        
+                    <!-- Display a chart here (e.g., using libraries like Chart.js or D3.js) -->
+                    <div class="chart">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                    
+                    </div>
+                    <div class="chart">
+                        <!-- Display another chart here -->
+                    </div>
+                </div>
+            </section>
+            
+        </section>
+        <section id="users">
+            <!-- Users content -->
+            <section id="users">
+                <h2>Users</h2>
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>shamir02</td>
+                            <td>Admin</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>admin123</td>
+                            <td>User</td>
+                            <td>Inactive</td>
+                        </tr>
+                        <!-- More rows as needed -->
+                    </tbody>
+                </table>
+            </section>
+            
+        </section>
+        <section id="products">
+            <section id="products">
+                <h2>Medicines</h2>
+                <div class="medicine-list">
+                    <div class="medicine">
+                        <img src="medicine1.jpg" alt="Medicine 1">
+                        <h3>Paracetamol</h3>
+                        <p>Strength: 500mg</p>
+                        <p>Price: $5.99</p>
+                        <button class="edit-button">Edit</button>
+                    </div>
+                    <div class="medicine">
+                        <img src="medicine2.jpg" alt="Medicine 2">
+                        <h3>Ibuprofen</h3>
+                        <p>Strength: 200mg</p>
+                        <p>Price: $7.49</p>
+                        <button class="edit-button">Edit</button>
+                    </div>
+                    <!-- Add more medicine divs as needed -->
+                </div>
+            </section>
+            
+        </section>
+        <section id="orders">
+            <!-- Orders content -->
+            <section id="orders">
+                <h2>Orders</h2>
+                <div class="order-list">
+                    <div class="order">
+                        <h3>Order #12345</h3>
+                        <p>Customer: otis</p>
+                        <p>Total Amount: $120.00</p>
+                        <p>Status: Processing</p>
+                        <button class="details-button">Details</button>
+                    </div>
+                    <div class="order">
+                        <h3>Order #12346</h3>
+                        <p>Customer: ruby</p>
+                        <p>Total Amount: $89.99</p>
+                        <p>Status: Shipped</p>
+                        <button class="details-button">Details</button>
+                    </div>
+                    <!-- Add more order divs as needed -->
+                </div>
+            </section>
+            
+        </section>
+        <section id="reports">
+            <!-- Reports content -->
+            <section id="reports">
+                <h2>Reports</h2>
+                <div class="report-options">
+                    <select id="report-type">
+                        <option value="sales">Sales Report</option>
+                        <option value="inventory">Inventory Report</option>
+                        <option value="user-activity">User Activity Report</option>
+                        <!-- Add more report options as needed -->
+                    </select>
+                    <div></div>
+                    <button id="generate-report">Generate Report</button>
+                </div>
+                <div class="report-results">
+                    <!-- Display generated report here -->
+                    
+                </div>
+            </section>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Admin Dashboard</p>
+    </footer>
+</body>
+</html>

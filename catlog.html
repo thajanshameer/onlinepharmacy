@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    
+</head>
+<body>
+  
+  <header>
+    <h1>Online Pharmacy</h1>
+    <nav>
+        <ul>
+            <li><a href="home1.php"><i class="fa-solid fa-house-chimney"></i></a></li>
+
+           
+            <li><a href="medicine.php">medicine</a></li>
+        
+            <li><a href="addtocart.php">cart</a></li>
+            <li><a href="ayurvedic.php">ayurvedic</a></li>
+            <li><a href="babycare.php">baby care</a></li>
+            <li><a href="personalcare.php">health care</a></li>
+            <li><a href="#">health and nutrition</a></li>
+            <li><a href="#">home essentials</a></li>
+        </ul>
+        </nav>
+
+</header>
+    <h2>Product Catalog</h2>
+
+    <div>
+        <label for="searchInput">Search:</label>
+        <input type="text" id="searchInput" onkeyup="searchProducts()">
+    </div>
+
+    <div>
+        <label for="sortSelect">Sort By:</label>
+        <select id="sortSelect" onchange="sortProducts()">
+            <option value="name">Name</option>
+            <!-- Add other sorting options if needed -->
+        </select>
+    </div>
+
+    <div>
+        <label for="categoryFilter">Filter By Category:</label>
+        <select id="categoryFilter" onchange="filterProducts()">
+            <option value="">All</option>
+            <option value="category1">Category 1</option>
+            <option value="category2">Category 2</option>
+            <!-- Add other category options if needed -->
+        </select>
+    </div>
+
+    <div id="productList">
+        <!-- Product items will be added here dynamically -->
+        
+    <div class="product 8">
+        <img src="IMMUGUARD.jpg" alt="product 8">
+        <h3>ImmuneGuard</h3>
+        <p>ImmuneGuard Syrup - 200ml</p>
+        <h2>MRP = $35</h2>   
+         <button onclick="addToCart('Product 8', 35)">Add to Cart</button>
+
+    </div>
+        <div class="product 9">
+            <img src="STRESSLESS.jpg" alt="product 9">
+            <h3>stressless</h3>
+            <p>StressLess Tablets - Pack of 40</p>
+            <h2>MRP = $55</h2>   
+             <button onclick="addToCart('Product 9', 55)">Add to Cart</button>
+    
+        </div>
+        
+<div>
+  <h2>Shopping Cart</h2>
+  <ul id="cart">
+    <!-- Cart items will be added here dynamically -->
+    
+
+
+    - Product 1 - $120
+    - Product 2 - $80
+    - Product 3 - $50
+    
+
+  </ul>
+  <button onclick="checkout()">Proceed to Checkout</button>
+</div>
+        
+
+    
+</div>
+<h2>Shopping Cart</h2>
+<ul id="cart">
+    <!-- Cart items will be added here dynamically -->
+</ul>
+<button onclick="checkout()">Proceed to Checkout</button>
+</div>
+
+    <script src="catlog.js"></script>
+</body>
+</html>
+<style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Style for the search and filter options */
+        div {
+            margin: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            padding: 8px;
+            margin-left: 10px;
+            width: 200px;
+        }
+
+        /* Style for product list */
+        #productList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 250px;
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .product h3 {
+            margin-top: 10px;
+            color: #4CAF50;
+        }
+
+        .product p {
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .product h2 {
+            color: #000;
+        }
+
+        .product button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            margin-top: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .product button:hover {
+            background-color: #45a049;
+        }
+
+        /* Style for the shopping cart */
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #cart {
+            list-style: none;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        #cart li {
+            margin: 5px 0;
+        }
+
+        #cart button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #cart button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <script src="catlog.js"></script>
+</body>
+</html>
+
+</style>
